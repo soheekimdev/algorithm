@@ -27,8 +27,10 @@ function solution(array) {
     // maxCount를 value로 갖는 keys 구하기
     const maxCountItems = Object.entries(itemCountMap).filter(([ , count]) => count === maxCount);
     if(maxCountItems.length > 1) {
+        // maxCount를 value로 갖는 key가 2개 이상이라면 -1 반환
         answer = -1;
     } else {
+        // maxCount를 value로 갖는 key값 반환
         answer = findMaxCountItem(itemCountMap, maxCount);   
     }
     
