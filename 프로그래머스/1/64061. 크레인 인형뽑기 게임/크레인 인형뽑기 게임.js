@@ -2,7 +2,7 @@ let popCount = 0;
 
 function getItemAtIndex(array, index) {
   const findPlace = array[index - 1];
-  if (findPlace) {
+  if (!!findPlace) {
     return findPlace;
   } else {
     return 0;
@@ -12,7 +12,6 @@ function getItemAtIndex(array, index) {
 function addDollToBasket(doll, basket) {
   const resultBasket = basket.slice();
   const lastDoll = resultBasket.at(-1);
-  if (!doll) return;
   if (doll === lastDoll) {
     resultBasket.pop();
     popCount += 2;
